@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomeContent from '../components/HomeContent.vue'
-import MapPage from '../components/MapPage.vue'
-import CoursePage from '../components/CoursePage.vue'
+import HomePage from '../pages/HomePage.vue'
+import MapPage from '../pages/MapPage.vue'
+import CoursePage from '../pages/CoursePage.vue'
+
 
 Vue.use(Router)
 
@@ -10,18 +11,22 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HomeContent',
-      component: HomeContent
-    },
+      name: 'HomePage',
+      component: HomePage
+    },{
+          path: '/home',
+          name: 'HomePage',
+          component: HomePage
+      },
       {
-        path: '/map',
-          name: 'Map',
+        path: '/videotour',
+          name: 'VideoTour',
           component: MapPage
       },
       {
         path: '/course',
           name: 'Course',
-          component: CoursePage,
+          component: CoursePage
           /*children: [
               {
                 path: 'course1',

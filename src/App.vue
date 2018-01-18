@@ -1,34 +1,21 @@
 <template>
-    <div id="Wrapper">
-      <!-- #Header_bg -->
+    <div>
+        <router-view></router-view>
+        <my-footer></my-footer>
+    </div>
 
-      <myheader></myheader>
-
-      <router-view></router-view>
-
-      <myfooter></myfooter>
-
-
-    </div><!-- #Wrapper -->
-    <!--<img src="./assets/logo.png">
-    <router-view/>-->
 </template>
 
 <script>
     import $ from 'jquery'
-
-    import header from './components/Header.vue'
-    import footer from './components/Footer.vue'
-    import homeContent from './components/HomeContent.vue'
-
+    import myFooter from './components/Footer.vue'
     export default {
-      name: 'app',
+        name: 'app',
         components:{
-          'myheader':header,
-            'myfooter':footer,
-            'home-content': homeContent
+            'my-footer':myFooter
         }
     };
+
 
     $(document).ready(function () {
 
