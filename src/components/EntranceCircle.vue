@@ -1,5 +1,5 @@
 <template>
-    <a id="entrance" href="#/videoTour"></a>
+    <a id="entrance" href="#/videoTour" target="_blank"></a>
 </template>
 
 <style>

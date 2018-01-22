@@ -1,7 +1,7 @@
 <template>
     <div>
-        <back-btn pageName="course"></back-btn>
-        <hr>
+        <!--<back-btn pageName="course"></back-btn>
+        <hr>-->
         <div id="mapWrapper">
             <div id="2dMap">
                 <img src="../assets/plat.jpg">
@@ -25,12 +25,12 @@
 </template>
 
 <script>
-    import Btn from '../components/BackBtn.vue'
+    /*import Btn from '../components/BackBtn.vue'
     export default {
         components:{
             'back-btn':Btn
         }
-    }
+    }*/
 </script>
 
 <style scoped="scoped">

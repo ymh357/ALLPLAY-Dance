@@ -22,7 +22,8 @@
                     <a id="back_to_top" class="button button_js" href=""><i class="icon-up-open-big"></i></a>
                     <!-- Copyrights -->
                     <div class="copyright">
-                        © 2017 Deakin University. All Rights Reserved. <a href="http://allplaydance.org.au/privacy/">Privacy Policy.</a> <a href="http://allplaydance.org.au/terms/">Terms of use.</a>					</div>
+                        © 2017 Deakin University. All Rights Reserved. <a href="http://allplaydance.org.au/privacy/">Privacy Policy.</a> <a href="http://allplaydance.org.au/terms/">Terms of use.</a>
+                    </div>
 
                     <ul class="social"></ul>
                 </div>

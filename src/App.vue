@@ -16,8 +16,8 @@
         }
     };
 
-
     $(document).ready(function () {
+
 
         var fix = $('#nav');                      //滚动悬浮块
         var end = $('.bottom');                     //滚动到这个元素后结束固定
