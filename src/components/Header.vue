@@ -54,13 +54,13 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Course <span class="caret"></span></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Class <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#/course/1" target="_blank">Course1</a></li>
-                                        <li><a href="#/course/2" target="_blank">Course2</a></li>
-                                        <li><a href="#/course/3" target="_blank">Course3</a></li>
+                                        <li><a href="#/class/1" target="_blank">Class1</a></li>
+                                        <li><a href="#/class/2" target="_blank">Class2</a></li>
+                                        <li><a href="#/class/3" target="_blank">Class3</a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a href="#/course" target="_blank">Course Overview</a></li>
+                                        <li><a href="#/class" target="_blank">Class Overview</a></li>
                                     </ul>
                                 </li>
                             </ul>
