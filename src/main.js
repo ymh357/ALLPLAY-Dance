@@ -9,6 +9,7 @@ Vue.config.productionTip = false
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
+Vue.prototype.bus = new Vue({})
 
 /* eslint-disable no-new */
 new Vue({

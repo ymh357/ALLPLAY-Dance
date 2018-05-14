@@ -20,7 +20,7 @@
                 <div class="column one">
 
                     <a id="back_to_top" class="button button_js" href=""><i class="icon-up-open-big"></i></a>
-                    <!-- Copyrights -->
+                    &lt;!&ndash; Copyrights &ndash;&gt;
                     <div class="copyright">
                         © 2017 Deakin University. All Rights Reserved. <a href="http://allplaydance.org.au/privacy/">Privacy Policy.</a> <a href="http://allplaydance.org.au/terms/">Terms of use.</a>
                     </div>
@@ -29,10 +29,11 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
     </footer>
 </template>
+
+<style scoped>
+    #Footer{
+        background:#90D6DA;
+    }
+</style>
