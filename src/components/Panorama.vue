@@ -2,8 +2,8 @@
     <div id="panoramaWrapper" @click="eliminateCover($event)">
         <div id="tempDiv" v-bind:style="{clip:clipStyle,top:topStyle,left:leftStyle}"  @mousedown="StartDragPC($event)" @click="$event.stopPropagation()" @touchstart="StartDragMobile($event)">
             <img :src="this.imgsrc" class="pointImg">  <!--v-bind:style="{clip:clipStyle,top:topStyle,left:leftStyle}"  @mousedown="StartDragPC($event)" @click="$event.stopPropagation()" @touchstart="StartDragMobile($event)"-->
-            <a v-show="this.nextpos" id="fArrow" href="#" @click="_forward($event)"><img :src="this.FArrowSrc" :style="[this.FArrowStyle,this.animationStyle]" class="arrowBtn"></a>
-            <a v-show="this.previouspos" id="bArrow" href="#" @click="_backward($event)"><img :src="this.BArrowSrc" :style="[this.BArrowStyle,this.animationStyle]" class="arrowBtn"></a>
+            <a v-show="this.nextpos" href="#" @click="_forward($event)"><img id="fArrow" :src="this.FArrowSrc" :style="[this.FArrowStyle,this.animationStyle]" class="arrowBtn"   @mouseover="startAnimate($event)"></a>
+            <a v-show="this.previouspos" href="#" @click="_backward($event)"><img id="bArrow" :src="this.BArrowSrc" :style="[this.BArrowStyle,this.animationStyle]" class="arrowBtn"  @mouseover="startAnimate($event)"></a>
         </div>
         <div id="miniMap" :style="this.miniMapStyle">
             <img src="../assets/map.png" width="100%" height="100%">
@@ -517,6 +517,17 @@
                 this.pos=this.previouspos
                 this.UpdatePanorama()
                 return false;
+            },
+
+            startAnimate(event){
+                let id=event.currentTarget.id
+                $('#'+id).animate({
+                    top: '-=50px'
+                },1000)
+
+                $('#'+id).animate({
+                    top: '+=50px'
+                },1000)
             }
         },
         computed: {
