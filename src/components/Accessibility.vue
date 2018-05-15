@@ -2,17 +2,17 @@
     <div>
         <h1>Accessibility Information</h1>
         <ul id="accessibility" class="list-unstyled">
-            <li>Accessible Parking <a @click="openNewParking($event)"><span  id="parkingLink" class="glyphicon glyphicon-eye-open"></span></a></li>
+            <li>Accessible Parking <a href="#" @click="openNewParking($event)"><span  id="parkingLink" class="glyphicon glyphicon-eye-open"></span></a></li>
 
-            <li>Accessible main entrance <a @click="openNewParking($event)"><span id="entranceLink" class="glyphicon glyphicon-eye-open"></span></a></li>
+            <li>Accessible main entrance <a href="#"  @click="openNewParking($event)"><span id="entranceLink" class="glyphicon glyphicon-eye-open"></span></a></li>
 
-            <li>Accessible doors <a @click="openNewParking($event)"><span id="doorsLink" class="glyphicon glyphicon-eye-open"></span></a></li>
+            <li>Accessible doors <a  href="#" @click="openNewParking($event)"><span id="doorsLink" class="glyphicon glyphicon-eye-open"></span></a></li>
 
-            <li>Accessible restroom <a @click="openNewParking($event)"><span id="restroomLink" class="glyphicon glyphicon-eye-open"></span></a></li>
+            <li>Accessible restroom <a href="#"  @click="openNewParking($event)"><span id="restroomLink" class="glyphicon glyphicon-eye-open"></span></a></li>
 
-            <li>Inside restroom <a @click="openNewParking($event)"><span id="insideRestroomLink" class="glyphicon glyphicon-eye-open"></span></a></li>
+            <li>Inside restroom <a href="#"  @click="openNewParking($event)"><span id="insideRestroomLink" class="glyphicon glyphicon-eye-open"></span></a></li>
 
-            <li>Signage <a @click="openNewParking($event)"><span id="signageLink" class="glyphicon glyphicon-eye-open"></span></a></li>
+            <li>Signage <a href="#"  @click="openNewParking($event)"><span id="signageLink" class="glyphicon glyphicon-eye-open"></span></a></li>
         </ul>
     </div>
 </template>
@@ -194,6 +194,8 @@
 
                 oCover.appendChild(oImgDiv)
                 document.body.appendChild(oCover)
+
+                return false
             }
         }
     }
