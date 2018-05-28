@@ -2,12 +2,16 @@
     <div id="panoramaWrapper" @click="eliminateCover($event)">
         <div id="tempDiv" v-bind:style="{clip:clipStyle,top:topStyle,left:leftStyle}"  @mousedown="StartDragPC($event)" @click="$event.stopPropagation()" @touchstart="StartDragMobile($event)">
             <img :src="this.imgsrc" class="pointImg">  <!--v-bind:style="{clip:clipStyle,top:topStyle,left:leftStyle}"  @mousedown="StartDragPC($event)" @click="$event.stopPropagation()" @touchstart="StartDragMobile($event)"-->
-            <a v-show="this.nextpos" href="#" @click="_forward($event)"><img id="fArrow" :src="this.FArrowSrc" :style="[this.FArrowStyle,this.animationStyle]" class="arrowBtn"   @mouseover="startAnimate($event)"></a>
-            <a v-show="this.previouspos" href="#" @click="_backward($event)"><img id="bArrow" :src="this.BArrowSrc" :style="[this.BArrowStyle,this.animationStyle]" class="arrowBtn"  @mouseover="startAnimate($event)"></a>
+            <!--<a v-show="this.nextpos" href="#" @click="_forward($event)"><img id="fArrow" :src="this.FArrowSrc" :style="[this.FArrowStyle,this.animationStyle]" class="arrowBtn"   @mouseover="startAnimate($event)"></a>
+            <a v-show="this.previouspos" href="#" @click="_backward($event)"><img id="bArrow" :src="this.BArrowSrc" :style="[this.BArrowStyle,this.animationStyle]" class="arrowBtn"  @mouseover="startAnimate($event)"></a>-->
+            <a v-show="this.nextpos" href="#" @click="_forward($event)"><img id="fArrow" :src="this.FArrowSrc" :style="[this.FArrowStyle]" class="arrowBtn"></a>
+            <a v-show="this.previouspos" href="#" @click="_backward($event)"><img id="bArrow" :src="this.BArrowSrc" :style="[this.BArrowStyle]" class="arrowBtn"></a>
         </div>
-        <div id="miniMap" :style="this.miniMapStyle">
-            <img src="../assets/map.png" width="100%" height="100%">
+        <div id="miniMap" :style="this.miniMapStyle" @click.prevent="ClickMiniMap($event)">
+           <my-map :cp="pos"></my-map>
+<!--
             <a id="currentPosition" :style="{left:pos[0]+'%',top:pos[1]+'%'}"></a>
+-->
         </div>
     </div>
 </template>
@@ -54,7 +58,7 @@
         height:100%;
         width:100%;
     }
-    #currentPosition{
+    /*#currentPosition{
         display: inline-block;
         background: green;
         border-radius: 50%;
@@ -62,12 +66,18 @@
         width:2%;
 
         position: absolute;
-    }
+    }*/
 </style>
 
 <script>
+    import Map from '../components/Map.vue'
+    import MyMap from "./Map.vue";
     export default {
 
+        components: {
+            MyMap,
+            'my-map':Map
+        },
         data: function () {
             return {
                 clip:{
@@ -113,7 +123,7 @@
                     clip:'rect(500px,700px,700px,500px)',
                     left:'700px',
                     top:'-430px'
-                }
+                },
             }
         },
         methods: {
@@ -176,6 +186,7 @@
 
                 this.positionDatas.absolutePos.top += v_move
                 this.positionDatas.absolutePos.left += h_move
+
             },
             StartDragMobile(event){
                 event.preventDefault()
@@ -528,6 +539,9 @@
                 $('#'+id).animate({
                     top: '+=50px'
                 },1000)
+            },
+            ClickMiniMap(event){
+                event.stopPropagation()
             }
         },
         computed: {
@@ -565,7 +579,6 @@
             let _this=this
             this.bus.$on('HotPointChosenEvent',(left,top)=>{
                 _this.pos=[parseFloat(left).toFixed(1),parseFloat(top).toFixed(1)]
-                console.log(_this.pos)
                 _this.UpdatePanorama()
             })
         }

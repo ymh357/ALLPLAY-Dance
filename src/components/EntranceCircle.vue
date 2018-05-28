@@ -1,13 +1,12 @@
 <template>
     <div>
-        <a href="#" class="entrance" @click="showPanorama($event)" :style="{left:pos[0]+'%',top:pos[1]+'%'}"></a>
+        <a href="#" class="entrance" @click="showPanorama($event)" :style="{left:pos[0]+'%',top:pos[1]+'%',background:this.ecolor}"></a>
     </div>
 </template>
 
 <style>
     .entrance{
         display: inline-block;
-        background: red;
         border-radius: 50%;
         height:1%;
         width:1.5%;
@@ -22,21 +21,22 @@
         props: {
             pos: {
                 type: Array
+            },
+            ecolor:{
+                type:String,
+
+                default:'blue'
+
             }
         },
         methods: {
             showPanorama(event) {
 
-                let hotpointLeft=this.pos[0].toFixed(1)
-                let hotpointTop=this.pos[1].toFixed(1)
-
-                this.bus.$emit('HotPointChosenEvent',hotpointLeft,hotpointTop)
 
                 let oWidth=window.innerWidth,
                     oHeight=window.innerHeight,
                     showMapDiv=document.getElementById('showMapDiv'),
                     showPanoramaDiv=document.getElementById('showPanoramaDiv')
-
                 showPanoramaDiv.style.position='fixed'
                 showPanoramaDiv.style.display='block'
                 showPanoramaDiv.style.left='0'

@@ -13,6 +13,26 @@
                 </div>
                 <div class="col-md-4 m_content" id="accessibility">
                     <my-accessibility></my-accessibility>
+
+                    <h1>Contact details</h1>
+                    <div id="contact">
+                        <table>
+                            <tbody>
+                            <tr><th>Name of organisation</th><td>Deakin Dance Studio</td></tr>
+                            <tr><th>Street Number</th><td>221</td></tr>
+                            <tr><th>Street Name</th><td>Stockyard Place</td></tr>
+                            <tr><th>Suburb</th><td>West Gosford</td></tr>
+                            <tr><th>Postcode</th><td>3125</td></tr>
+                            <tr><th>State</th><td>VIC</td></tr>
+                            <tr><th>Email</th><td>info@deakindance.com.au</td></tr>
+                            <tr><th>Fixed Telephone</th><td>03 4322 2626</td></tr>
+                            <tr><th>Mobile</th><td>0422 845 931</td></tr>
+                            <tr><th>Fax</th><td>03 4322 2626</td></tr>
+                            <tr><th>Website Address</th><td>http://deakindance.com.au</td></tr>
+                            </tbody>
+
+                        </table>
+                    </div>
                 </div>
                 <div class="col-md-4 m_content" id="map">
                     <h1>2D map of Deakin Dance Studio:</h1>
@@ -45,26 +65,6 @@
             </div>
         </div>
 
-        <div id="contact">
-            <table>
-                <caption>Contact Details</caption>
-                <tbody>
-                    <tr><th>Name of organisation</th><td>Deakin Dance Studio</td></tr>
-                    <tr><th>Street Number</th><td>221</td></tr>
-                    <tr><th>Street Name</th><td>Stockyard Place</td></tr>
-                    <tr><th>Suburb</th><td>West Gosford</td></tr>
-                    <tr><th>Postcode</th><td>3125</td></tr>
-                    <tr><th>State</th><td>VIC</td></tr>
-                    <tr><th>Email</th><td>info@deakindance.com.au</td></tr>
-                    <tr><th>Fixed Telephone</th><td>03 4322 2626</td></tr>
-                    <tr><th>Mobile</th><td>0422 845 931</td></tr>
-                    <tr><th>Fax</th><td>03 4322 2626</td></tr>
-                    <tr><th>Website Address</th><td>http://deakindance.com.au</td></tr>
-                </tbody>
-
-            </table>
-        </div>
-
         <div id="showMapDiv">
             <my-map></my-map>
         </div>
@@ -79,11 +79,11 @@
 <style scoped="scoped">
 
     #overviewPageWrapper{
-        height: 250%;
+        height: 130%;
     }
 
     #m_contentWrapper{
-        height: 50%;
+        height: 65%;
         overflow: auto;
     }
     #m_contentRow{
@@ -91,14 +91,14 @@
     }
 
     #overview{
-        border-right: 10px solid white;
+        border-right: 2px solid white;
     }
     #accessibility{
-        border-left: 10px solid white;
-        border-right: 10px solid white;
+        border-left: 2px solid white;
+        border-right: 2px solid white;
     }
     #map{
-        border-left: 10px solid white;
+        border-left: 2px solid white;
     }
     #mapImg{
         cursor: zoom-in;
@@ -107,11 +107,12 @@
     #classWrapper{
         background-color: #5bc0de;
         overflow: auto;
-        height: 30%;
+        height: 35%;
     }
     #contact{
-        background-color:#9B9B9B;
-        height: 20%;
+
+        width: 100%;
+
         overflow: auto;
     }
     #contact>table{

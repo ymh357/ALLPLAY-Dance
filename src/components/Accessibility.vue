@@ -19,8 +19,8 @@
 
 <style>
     #accessibility>li{
-        padding-top: 5%;
-        padding-bottom: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
 </style>
 
